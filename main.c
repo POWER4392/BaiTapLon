@@ -6,8 +6,9 @@
 
 int main() {
     int choice; 
-    int i;
+    int i, n;
     int a= 5;
+    int random_num; 
     printf("Chuong trinh cua nhom 8\n");
     printf("1-So Sanh 2 So Nguyen\n");
     printf("2-Cong tru phep tinh\n");
@@ -41,37 +42,14 @@ int main() {
       
     case 3: // vu
        
-    unsigned int time_value=(unsigned int)time(NULL);
-    int random_num=time_value%10;
-    printf("GUESS THE NUMBER FROM 1 TO 99: \n");
-    printf("YOU HAVE 10 LIFE TO GUESS\n");
-    printf("GUESS: ");
-    scanf("%d", &i);
-    printf("\n");
-    while (i!=random_num, a--){
-       if (a!=0){
-           if (i<random_num){
-               printf("HIGHER!! \n");
-               printf("GUESS AGAIN - LIFE: %d\n",a);
-               scanf("%d",&i);
-               printf("\n");
-           }
-           else if (i>random_num){
-               printf("LOWER!! \n");
-               printf("GUESS AGAIN - LIFE: %d\n",a);
-               scanf("%d", &i);
-               printf("\n");
-           }
-       }
-       else{
-           continue;
-       }
+     DoanSo();
+     if (n==random_num){
+        printf("u win \n");
     }
-    if (i==random_num){
-       printf("DING DING!!! YOU'RE RIGHTTT", i);
-    }
-    else{
-       printf("YOU LOSE");
+    
+     else {
+        printf("u lost \n");
+        printf("The number is: %d\n", random_num);
     }
 
     break;

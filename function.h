@@ -5,6 +5,7 @@
 void xacDinhChanLe(int arr[], int size);
 void soSanhHaiso(int So1, int So2);
 void Congtru(int a, int b);
+void DoanSo();
 void keobuabao();
 
 #endif

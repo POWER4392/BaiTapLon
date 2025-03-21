@@ -61,3 +61,34 @@ void keobuabao() { //manh, minh hanh
     }
   }
 
+  void DoanSo() {
+    int n;
+    int a=5;
+    unsigned int time_value=(unsigned int)time(NULL);
+    int random_num=time_value%10;
+    printf("GUESS THE NUMBER FROM 1 TO 99: \n");
+    printf("YOU HAVE 5 LIFE TO GUESS\n");
+    printf("GUESS: ");
+    scanf("%d", &n);
+    printf("\n");
+    while (n!=random_num && a--){
+        if (a!=0){
+            if ( n <random_num){
+                printf("HIGHER!! \n");
+                printf("GUESS AGAIN - LIFE: %d\n",a);
+                scanf("%d",&n);
+                printf("\n");
+            }
+            else if ( n >random_num){
+                printf("LOWER!! \n");
+                printf("GUESS AGAIN - LIFE: %d\n",a);
+                scanf("%d", &n);
+                printf("\n");
+            }
+        }
+        else{
+            break;
+        }
+    }
+ }
+
