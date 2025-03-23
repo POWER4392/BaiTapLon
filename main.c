@@ -9,6 +9,7 @@ int main() {
     int i, n;
     int a= 5;
     int random_num; 
+    int x, y;
     printf("Chuong trinh cua nhom 8\n");
     printf("1-So Sanh 2 So Nguyen\n");
     printf("2-Cong tru phep tinh\n");
@@ -16,10 +17,8 @@ int main() {
     printf("4-Xac Dinh Chan Le\n");
     printf("5-Keo Bua Bao\n");
     printf("Chon Chuong Trinh: ");
-    if (scanf("%d", &choice) != 1) {
-        printf("Chuong Trinh khong ton tai, Vui Long chon lai.\n");
-        return 1;
-    }
+    scanf("%d", &choice);
+    
     switch (choice) {
      
     case 1:  // phuong anh
@@ -32,13 +31,15 @@ int main() {
      break;
     
     case 2: //manh
-     int x, y;
-      printf("Nhap so thu nhat: ");
-      scanf("%d ", &x, congtru );
-       
-      printf("Nhap so thu hai: ");
-      scanf("%d ", &y, congtru );
-     congtru(x, y);
+    printf("Nhap so thu nhat: ");
+    scanf("%d", &x);
+
+    printf("Nhap so thu hai: ");
+    scanf("%d", &y);
+      
+      congtru(x, y);
+
+     break;
       
     case 3: // vu
        
@@ -54,7 +55,6 @@ int main() {
 
     break;
      
-      
     case 4: //hanh
 
      int arr[] = {10, 23, 15, 7, 8, 22, 5, 11};
@@ -80,6 +80,10 @@ int main() {
             break;
         }
     }
+    
+    default:
+     printf("Chuong trinh khong ton tai\n");
+     break;
  }
 
   return 0;

@@ -32,9 +32,32 @@ void soSanhHaiso(int So1, int So2) {
 }
 
 void congtru(int a, int b) {
+    int choice;
+    printf ("1. Cong \n");
+    printf ("2. Tru \n");  
+    printf ("3. Nhan \n");
+    printf ("4. Chia \n");
+    printf ("chon phep tinh: ");
+    scanf("%d", &choice); 
 
-    printf("Tong: %d\n", a + b);
-    printf("Hieu: %d\n", a - b);
+    switch (choice) {
+        case 1:
+            printf("Tong: %d\n", a + b);
+            break;
+        case 2:
+            printf("Hieu: %d\n", a - b);
+            break;
+        case 3:
+            printf("Tich %d\n", a * b);
+            break;
+        case 4:
+            printf("Thuong %d\n", a / b);
+            printf("Du %d\n", a % b);
+            break;    
+        default:
+            printf("Lua chon khong hop le\n");
+            break;
+    }
 }
 
 void keobuabao() { //manh, minh hanh
