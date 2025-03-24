@@ -37,7 +37,7 @@ void congtru(int a, int b) {
     printf ("2. Tru \n");  
     printf ("3. Nhan \n");
     printf ("4. Chia \n");
-    printf ("chon phep tinh: ");
+    printf ("Chon phep tinh: ");
     scanf("%d", &choice); 
 
     switch (choice) {
@@ -89,22 +89,22 @@ void keobuabao() { //manh, minh hanh
     int a=5;
     unsigned int time_value=(unsigned int)time(NULL);
     int random_num=time_value%10;
-    printf("GUESS THE NUMBER FROM 1 TO 99: \n");
-    printf("YOU HAVE 5 LIFE TO GUESS\n");
-    printf("GUESS: ");
+    printf("Doan so tu 1 den 10: \n");
+    printf("Ban co 5 luot doan\n");
+    printf("DOAN: ");
     scanf("%d", &n);
     printf("\n");
     while (n!=random_num && a--){
         if (a!=0){
             if ( n <random_num){
-                printf("HIGHER!! \n");
-                printf("GUESS AGAIN - LIFE: %d\n",a);
+                printf("CAO HOWN!! \n");
+                printf("DOAN LAI - LUOT DOAN CON: %d\n",a);
                 scanf("%d",&n);
                 printf("\n");
             }
             else if ( n >random_num){
-                printf("LOWER!! \n");
-                printf("GUESS AGAIN - LIFE: %d\n",a);
+                printf("THAP HON!! \n");
+                printf("DOAN LAI - LUOT DOAN CON: %d\n",a);
                 scanf("%d", &n);
                 printf("\n");
             }
