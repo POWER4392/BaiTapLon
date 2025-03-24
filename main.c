@@ -12,7 +12,7 @@ int main() {
     int x, y;
     printf("Chuong trinh cua nhom 8\n");
     printf("1-So Sanh 2 So Nguyen\n");
-    printf("2-Cong tru phep tinh\n");
+    printf("2-May tinh don gian\n");
     printf("3-Doan SO\n");
     printf("4-Xac Dinh Chan Le\n");
     printf("5-Keo Bua Bao\n");
@@ -31,13 +31,12 @@ int main() {
      break;
     
     case 2: //manh
-    printf("Nhap so thu nhat: ");
-    scanf("%d", &x);
+     printf("Nhap so thu nhat: ");
+     scanf("%d", &x);
 
-    printf("Nhap so thu hai: ");
-    scanf("%d", &y);
-      
-      congtru(x, y);
+     printf("Nhap so thu hai: ");
+     scanf("%d", &y);
+     congtru(x, y);
 
      break;
       
@@ -45,12 +44,12 @@ int main() {
        
      DoanSo();
      if (n==random_num){
-        printf("u win \n");
+        printf("Ban da doan dung \n");
     }
     
      else {
-        printf("u lost \n");
-        printf("The number is: %d\n", random_num);
+        printf("Ban da thua \n");
+        printf("So la: %d\n", random_num);
     }
 
     break;
